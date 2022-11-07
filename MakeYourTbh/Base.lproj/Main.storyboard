@@ -322,7 +322,32 @@
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDU-AS-9w8">
                                                 <rect key="frame" x="0.0" y="661" width="361" height="62"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0o3-7d-3sh">
+                                                        <rect key="frame" x="0.0" y="12" width="90" height="39"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Burning House">
+                                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                            <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="burnhos:" destination="Gmr-yH-flV" eventType="touchUpInside" id="c98-oC-HeP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hg-ws-coL">
+                                                        <rect key="frame" x="98" y="12" width="79" height="39"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Clown Stage">
+                                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                            <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="clownstage:" destination="Gmr-yH-flV" eventType="touchUpInside" id="aJx-mq-xsM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="joE-BZ-wec">
                                                 <rect key="frame" x="0.0" y="822" width="361" height="62"/>
@@ -611,7 +636,7 @@
                     <connections>
                         <outlet property="hatView" destination="z1Z-rs-uSv" id="OGg-Tz-ahY"/>
                         <outlet property="kit" destination="Yjs-3L-Q0e" id="32z-SC-XX1"/>
-                        <outlet property="neckView" destination="J5D-RI-FfF" id="zjF-E2-YbD"/>
+                        <outlet property="neckView" destination="asj-OV-A3c" id="Pi4-uD-2RT"/>
                         <outlet property="pantsView" destination="F40-yo-qLy" id="Bw6-fl-fov"/>
                         <outlet property="shirtView" destination="J5D-RI-FfF" id="hhT-fR-MkB"/>
                     </connections>

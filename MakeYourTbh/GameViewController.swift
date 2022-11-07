@@ -15,6 +15,8 @@ class GameViewController: UIViewController {
     var neckPos:Float = 0
     var pantsPos:Float = 0
     var shirtPos:Float = 0
+    var box:SCNNode!
+    //cur/last system
     var current:SCNNode!
     var last:SCNNode!
     var LCurrent:SCNNode!
@@ -23,7 +25,8 @@ class GameViewController: UIViewController {
     var PLast:SCNNode!
     var shirCurrent:SCNNode!
     var shirLast:SCNNode!
-    var box:SCNNode!
+    var envCurr:SCNNode!
+    var envLast:SCNNode!
    //core scene
     var scene:SCNScene!
     var tbh:SCNNode!
@@ -53,11 +56,13 @@ class GameViewController: UIViewController {
     //shirt
     var threeEye:SCNNode!
     var redShirt:SCNNode!
-    
     var canadaLove:SCNNode!
     var floral:SCNNode!
     var killerSweater: SCNNode!
     var sweatyShirt: SCNNode!
+    //enviroments
+    var burningHouse: SCNNode!
+    var clownStage: SCNNode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +91,8 @@ class GameViewController: UIViewController {
         PCurrent = box
         shirLast = box
         shirCurrent = box
+        envCurr = box
+        envLast = box
     }
     
     func setupnodes(){
@@ -118,6 +125,8 @@ class GameViewController: UIViewController {
         floral = scene.rootNode.childNode(withName: "floral shirt", recursively: true)
         killerSweater = scene.rootNode.childNode(withName: "killerSweater", recursively: true)
         sweatyShirt = scene.rootNode.childNode(withName: "sweatyShirt", recursively: true)
+        burningHouse = scene.rootNode.childNode(withName: "burningBuilding", recursively: true)
+        clownStage = scene.rootNode.childNode(withName: "pokadotEnv", recursively: true)
     }
     //side scrolling
     @IBAction func movehatleft(_ sender: UIButton) {
@@ -473,6 +482,27 @@ class GameViewController: UIViewController {
             overalls.isHidden = true
         }else{
             sweatyShirt.isHidden = true
+        }
+    }
+    //enviroments
+    @IBAction func burnhos(_ sender: UIButton) {
+        if burningHouse.isHidden{
+            envLast = envCurr
+            envCurr = burningHouse
+            envLast.isHidden = true
+            envCurr.isHidden = false
+        }else{
+            burningHouse.isHidden = true
+        }
+    }
+    @IBAction func clownstage(_ sender: UIButton) {
+        if clownStage.isHidden{
+            envLast = envCurr
+            envCurr = clownStage
+            envLast.isHidden = true
+            envCurr.isHidden = false
+        }else{
+            clownStage.isHidden = true
         }
     }
     
