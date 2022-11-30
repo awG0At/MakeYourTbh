@@ -10,6 +10,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var pantsView: UIView!
     @IBOutlet weak var shirtView: UIView!
     @IBOutlet weak var kit: SCNView!
+    @IBOutlet weak var friends: UITextField!
     //other
     var hatPos:Float = 0
     var neckPos:Float = 0
@@ -31,13 +32,13 @@ class GameViewController: UIViewController {
     var scene:SCNScene!
     var tbh:SCNNode!
     //hats
-    var devilhorns:SCNNode!
-    var clownafro:SCNNode!
-    var THat:SCNNode!
-    var wolfEars:SCNNode!
-    var cowboy:SCNNode!
-    var nija:SCNNode!
-    var pinkhair:SCNNode!
+        var devilhorns:SCNNode!
+        var clownafro:SCNNode!
+        var THat:SCNNode!
+        var wolfEars:SCNNode!
+        var cowboy:SCNNode!
+        var nija:SCNNode!
+        var pinkhair:SCNNode!
     //necklace
     var saphire:SCNNode!
     var monies:SCNNode!
@@ -93,6 +94,7 @@ class GameViewController: UIViewController {
         shirCurrent = box
         envCurr = box
         envLast = box
+        
     }
     
     func setupnodes(){
@@ -111,15 +113,15 @@ class GameViewController: UIViewController {
         pinkhair = scene.rootNode.childNode(withName: "pinkhair", recursively: true)
         bluePants = scene.rootNode.childNode(withName: "tbhpants", recursively: true)
         winner = scene.rootNode.childNode(withName: "winner", recursively: true)
-        redPolkdot = scene.rootNode.childNode(withName: "polkadot pants", recursively: true)
+        redPolkdot = scene.rootNode.childNode(withName: "polkadotpants", recursively: true)
         box = scene.rootNode.childNode(withName: "box", recursively: true)
         scarf = scene.rootNode.childNode(withName: "scarf", recursively: true)
         appleBottoms = scene.rootNode.childNode(withName: "appleBottoms", recursively: true)
         biegeShorts = scene.rootNode.childNode(withName: "biegeShorts", recursively: true)
         overalls = scene.rootNode.childNode(withName: "overalls", recursively: true)
-        shortshorts = scene.rootNode.childNode(withName: "short-shorts", recursively: true)
+        shortshorts = scene.rootNode.childNode(withName: "shortshorts", recursively: true)
         snans = scene.rootNode.childNode(withName: "snans", recursively: true)
-        threeEye = scene.rootNode.childNode(withName: "Cat Stripes", recursively: true)
+        threeEye = scene.rootNode.childNode(withName: "Catstripes", recursively: true)
         redShirt = scene.rootNode.childNode(withName: "redShirt", recursively: true)
         canadaLove = scene.rootNode.childNode(withName: "CanadaLove", recursively: true)
         floral = scene.rootNode.childNode(withName: "floral shirt", recursively: true)
@@ -186,7 +188,25 @@ class GameViewController: UIViewController {
         }
     }
     
+    @IBAction func set(_ sender: UIButton) {
+        let hats: [[String]] = [["devilhorns", "", ""], ["", ""],]
+        let friendCode:String = friends.text ?? ""
+        let code = friendCode.split(separator: ",")
+        let codeIndex = code.enumerated()
+        
+        for (index, code) in codeIndex
+        {
+            print(hats[0][0])
+        }
+    }
     
+    
+    @IBAction func copyCur(_ sender: UIButton) {
+        let currents: [SCNNode] = [current ,LCurrent ,PCurrent ,shirCurrent ,envCurr]
+        UIPasteboard.general.string = "\(currents)"
+        print (currents)
+
+    }
     //hat selection
     //
     @IBAction func DevilHorns(_ sender: UIButton) {
