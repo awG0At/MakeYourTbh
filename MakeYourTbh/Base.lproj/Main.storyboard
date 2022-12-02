@@ -17,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catch cross" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-HR-3cG">
-                                <rect key="frame" x="49" y="366" width="294" height="313"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="tbhScene.scn" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yjs-3L-Q0e">
                                 <rect key="frame" x="16" y="59" width="361" height="269"/>
                             </sceneKitView>
@@ -605,37 +601,6 @@
                                                     </button>
                                                 </subviews>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="paste friend's tbh" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-jU-P3E">
-                                                <rect key="frame" x="0.0" y="1124" width="141" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="textColor" systemColor="systemGrayColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trt-Lc-sJE">
-                                                <rect key="frame" x="208" y="1123" width="145" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="copy current">
-                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="copyCur:" destination="Gmr-yH-flV" eventType="touchUpInside" id="h3R-8n-EBh"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aaf-P3-Ew0">
-                                                <rect key="frame" x="149" y="1123" width="51" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="set">
-                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="set:" destination="Gmr-yH-flV" eventType="touchUpInside" id="0Vc-IP-2uH"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1200" id="Srp-DB-f0v"/>
@@ -665,7 +630,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="friends" destination="MDX-jU-P3E" id="ThK-RB-9XA"/>
                         <outlet property="hatView" destination="z1Z-rs-uSv" id="OGg-Tz-ahY"/>
                         <outlet property="kit" destination="Yjs-3L-Q0e" id="32z-SC-XX1"/>
                         <outlet property="neckView" destination="asj-OV-A3c" id="Pi4-uD-2RT"/>
@@ -679,7 +643,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="catch cross" width="1167" height="657"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -697,9 +660,6 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

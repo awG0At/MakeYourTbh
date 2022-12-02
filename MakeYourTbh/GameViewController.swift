@@ -10,7 +10,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var pantsView: UIView!
     @IBOutlet weak var shirtView: UIView!
     @IBOutlet weak var kit: SCNView!
-    @IBOutlet weak var friends: UITextField!
     //other
     var hatPos:Float = 0
     var neckPos:Float = 0
@@ -186,26 +185,6 @@ class GameViewController: UIViewController {
             shirtPos = shirtPos + -40
             shirtView.transform = CGAffineTransform(translationX: CGFloat(shirtPos), y: 0)
         }
-    }
-    
-    @IBAction func set(_ sender: UIButton) {
-        let hats: [[String]] = [["devilhorns", "", ""], ["", ""],]
-        let friendCode:String = friends.text ?? ""
-        let code = friendCode.split(separator: ",")
-        let codeIndex = code.enumerated()
-        
-        for (index, code) in codeIndex
-        {
-            print(hats[0][0])
-        }
-    }
-    
-    
-    @IBAction func copyCur(_ sender: UIButton) {
-        let currents: [SCNNode] = [current ,LCurrent ,PCurrent ,shirCurrent ,envCurr]
-        UIPasteboard.general.string = "\(currents)"
-        print (currents)
-
     }
     //hat selection
     //
