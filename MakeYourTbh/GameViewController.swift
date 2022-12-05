@@ -31,13 +31,13 @@ class GameViewController: UIViewController {
     var scene:SCNScene!
     var tbh:SCNNode!
     //hats
-        var devilhorns:SCNNode!
-        var clownafro:SCNNode!
-        var THat:SCNNode!
-        var wolfEars:SCNNode!
-        var cowboy:SCNNode!
-        var nija:SCNNode!
-        var pinkhair:SCNNode!
+    var devilhorns:SCNNode!
+    var clownafro:SCNNode!
+    var THat:SCNNode!
+    var wolfEars:SCNNode!
+    var cowboy:SCNNode!
+    var nija:SCNNode!
+    var pinkhair:SCNNode!
     //necklace
     var saphire:SCNNode!
     var monies:SCNNode!
