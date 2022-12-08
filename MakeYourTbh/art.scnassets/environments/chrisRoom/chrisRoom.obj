@@ -1,0 +1,15 @@
+# Apple ModelIO OBJ File: chrisRoom
+mtllib chrisRoom.mtl
+g 
+v 17.1157 -6.38568 14.0633
+v -17.1157 -6.38567 14.0633
+v -17.1157 19.2879 14.0633
+v 17.1157 19.2879 14.0633
+vn -0 -0 -1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+usemtl material_1
+f 1/1/1 2/2/1 3/3/1 4/4/1 
+s off

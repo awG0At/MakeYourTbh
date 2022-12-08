@@ -60,9 +60,21 @@ class GameViewController: UIViewController {
     var floral:SCNNode!
     var killerSweater: SCNNode!
     var sweatyShirt: SCNNode!
+    var chris:SCNNode!
     //enviroments
     var burningHouse: SCNNode!
     var clownStage: SCNNode!
+    var chrisRoom: SCNNode!
+    //props
+    var angy:SCNNode!
+    var clownNose:SCNNode!
+    var monocle:SCNNode!
+    var mustach:SCNNode!
+    var nose:SCNNode!
+    //extra
+    var bana:SCNNode!
+    var bomb:SCNNode!
+    var devilTrident:SCNNode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,6 +140,10 @@ class GameViewController: UIViewController {
         sweatyShirt = scene.rootNode.childNode(withName: "sweatyShirt", recursively: true)
         burningHouse = scene.rootNode.childNode(withName: "burningBuilding", recursively: true)
         clownStage = scene.rootNode.childNode(withName: "pokadotEnv", recursively: true)
+        //
+        chris = scene.rootNode.childNode(withName: "chris", recursively: true)
+        chrisRoom = scene.rootNode.childNode(withName: "chrisRoom", recursively: true)
+        
     }
     //side scrolling
     @IBAction func movehatleft(_ sender: UIButton) {
