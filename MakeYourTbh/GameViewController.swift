@@ -143,7 +143,14 @@ class GameViewController: UIViewController {
         //
         chris = scene.rootNode.childNode(withName: "chris", recursively: true)
         chrisRoom = scene.rootNode.childNode(withName: "chrisRoom", recursively: true)
-        
+        angy = scene.rootNode.childNode(withName: "angy", recursively: true)
+        clownNose = scene.rootNode.childNode(withName: "clownNose", recursively: true)
+        monocle = scene.rootNode.childNode(withName: "monocle", recursively: true)
+        mustach = scene.rootNode.childNode(withName: "mustach", recursively: true)
+        nose = scene.rootNode.childNode(withName: "nose", recursively: true)
+        bana = scene.rootNode.childNode(withName: "bana", recursively: true)
+        bomb = scene.rootNode.childNode(withName: "bomb", recursively: true)
+        devilTrident = scene.rootNode.childNode(withName: "devil trident", recursively: true)
     }
     //side scrolling
     @IBAction func movehatleft(_ sender: UIButton) {
@@ -499,6 +506,19 @@ class GameViewController: UIViewController {
             sweatyShirt.isHidden = true
         }
     }
+    @IBAction func chrisChan(_ sender: UIButton) {
+        if chris.isHidden{
+            shirLast = shirCurrent
+            shirCurrent = chris
+            shirLast.isHidden = true
+            shirCurrent.isHidden = false
+            overalls.isHidden = true
+        }else{
+            chris.isHidden = true
+        }
+    }
+    
+    
     //enviroments
     @IBAction func burnhos(_ sender: UIButton) {
         if burningHouse.isHidden{
@@ -520,5 +540,16 @@ class GameViewController: UIViewController {
             clownStage.isHidden = true
         }
     }
+    @IBAction func chrisRoom(_ sender: UIButton) {
+        if chrisRoom.isHidden{
+            envLast = envCurr
+            envCurr = chrisRoom
+            envLast.isHidden = true
+            envCurr.isHidden = false
+        }else{
+            chrisRoom.isHidden = true
+        }
+    }
+    
     
 }
