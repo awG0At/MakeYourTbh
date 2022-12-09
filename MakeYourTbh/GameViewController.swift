@@ -10,11 +10,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var pantsView: UIView!
     @IBOutlet weak var shirtView: UIView!
     @IBOutlet weak var kit: SCNView!
+    @IBOutlet weak var propView: UIView!
     //other
     var hatPos:Float = 0
     var neckPos:Float = 0
     var pantsPos:Float = 0
     var shirtPos:Float = 0
+    var propPos:Float = 0
     var box:SCNNode!
     //cur/last system
     var current:SCNNode!
@@ -27,6 +29,10 @@ class GameViewController: UIViewController {
     var shirLast:SCNNode!
     var envCurr:SCNNode!
     var envLast:SCNNode!
+    var propC:SCNNode!
+    var propL:SCNNode!
+    var extC:SCNNode!
+    var extL:SCNNode!
    //core scene
     var scene:SCNScene!
     var tbh:SCNNode!
@@ -105,6 +111,10 @@ class GameViewController: UIViewController {
         shirCurrent = box
         envCurr = box
         envLast = box
+        propC = box
+        propL = box
+        extC = box
+        extL = box
         
     }
     
@@ -152,6 +162,16 @@ class GameViewController: UIViewController {
         bomb = scene.rootNode.childNode(withName: "bomb", recursively: true)
         devilTrident = scene.rootNode.childNode(withName: "devil trident", recursively: true)
     }
+    @IBAction func reset(_ sender: UIButton) {
+        current.isHidden = true
+        LCurrent.isHidden = true
+        PCurrent.isHidden = true
+        shirCurrent.isHidden = true
+        envCurr.isHidden = true
+        propC.isHidden = true
+        extC.isHidden = true
+    }
+    
     //side scrolling
     @IBAction func movehatleft(_ sender: UIButton) {
         if hatPos <= -5 {
@@ -209,6 +229,21 @@ class GameViewController: UIViewController {
             shirtView.transform = CGAffineTransform(translationX: CGFloat(shirtPos), y: 0)
         }
     }
+    //prop scroll
+    @IBAction func movePropLeft(_ sender: UIButton) {
+        if propPos <= -5 {
+            propPos = propPos + 40
+        }
+        propView.transform = CGAffineTransform(translationX: CGFloat(propPos), y: 0)
+    }
+    
+    @IBAction func movePropRight(_ sender: UIButton) {
+        if propPos >= -150{
+            propPos = propPos + -40
+            propView.transform = CGAffineTransform(translationX: CGFloat(propPos), y: 0)
+        }
+    }
+    
     //hat selection
     //
     @IBAction func DevilHorns(_ sender: UIButton) {
@@ -550,6 +585,87 @@ class GameViewController: UIViewController {
             chrisRoom.isHidden = true
         }
     }
-    
+    //props
+    @IBAction func angy(_ sender: UIButton) {
+        if angy.isHidden{
+            propL = propC
+            propC = angy
+            propL.isHidden = true
+            propC.isHidden = false
+        }else{
+            angy.isHidden = true
+        }
+    }
+    @IBAction func Monocle(_ sender: UIButton) {
+        if monocle.isHidden{
+            propL = propC
+            propC = monocle
+            propL.isHidden = true
+            propC.isHidden = false
+        }else{
+            monocle.isHidden = true
+        }
+    }
+    @IBAction func ClownNose(_ sender: UIButton) {
+        if clownNose.isHidden{
+            propL = propC
+            propC = clownNose
+            propL.isHidden = true
+            propC.isHidden = false
+        }else{
+            clownNose.isHidden = true
+        }
+    }
+    @IBAction func musta(_ sender: UIButton) {
+        if mustach.isHidden{
+            propL = propC
+            propC = mustach
+            propL.isHidden = true
+            propC.isHidden = false
+        }else{
+            mustach.isHidden = true
+        }
+    }
+    @IBAction func NOSE(_ sender: UIButton) {
+        if nose.isHidden{
+            propL = propC
+            propC = nose
+            propL.isHidden = true
+            propC.isHidden = false
+        }else{
+            nose.isHidden = true
+        }
+    }
+    //extra
+    @IBAction func bana(_ sender: UIButton) {
+        if bana.isHidden{
+            extL = extC
+            extC = bana
+            extL.isHidden = true
+            extC.isHidden = false
+        }else{
+            bana.isHidden = true
+        }
+    }
+    @IBAction func bomb(_ sender: UIButton) {
+        if bomb.isHidden{
+            extL = extC
+            extC = bomb
+            extL.isHidden = true
+            extC.isHidden = false
+        }else{
+            bomb.isHidden = true
+        }
+    }
+    @IBAction func triden(_ sender: UIButton) {
+        if devilTrident.isHidden{
+            extL = extC
+            extC = devilTrident
+            extL.isHidden = true
+            extC.isHidden = false
+        }else{
+            devilTrident.isHidden = true
+        }
+    }
     
 }
