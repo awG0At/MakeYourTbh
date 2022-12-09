@@ -172,6 +172,9 @@ class GameViewController: UIViewController {
         extC.isHidden = true
     }
     
+    @IBAction func screenShot(_ sender: UIButton) {
+        
+    }
     //side scrolling
     @IBAction func movehatleft(_ sender: UIButton) {
         if hatPos <= -5 {
@@ -224,7 +227,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func moveshirtright(_ sender: UIButton) {
-        if shirtPos >= -150{
+        if shirtPos >= -200{
             shirtPos = shirtPos + -40
             shirtView.transform = CGAffineTransform(translationX: CGFloat(shirtPos), y: 0)
         }
