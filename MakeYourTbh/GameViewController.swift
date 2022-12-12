@@ -3,6 +3,7 @@ import UIKit
 import QuartzCore
 import SceneKit
 
+
 class GameViewController: UIViewController {
 
     @IBOutlet weak var hatView: UIView!
@@ -85,13 +86,10 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //did load
-        
             setupscene()
             setupnodes()
             firstlastSetup()
-        
     }
-    
     
     func setupscene(){
         //connects scene node to scnkit scene and connects kitviewto scene
@@ -162,6 +160,7 @@ class GameViewController: UIViewController {
         bomb = scene.rootNode.childNode(withName: "bomb", recursively: true)
         devilTrident = scene.rootNode.childNode(withName: "devil trident", recursively: true)
     }
+    
     @IBAction func reset(_ sender: UIButton) {
         current.isHidden = true
         LCurrent.isHidden = true
