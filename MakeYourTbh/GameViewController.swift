@@ -2,7 +2,7 @@
 import UIKit
 import QuartzCore
 import SceneKit
-
+import Photos
 
 class GameViewController: UIViewController {
 
@@ -172,7 +172,13 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func screenShot(_ sender: UIButton) {
+        UIGraphicsBeginImageContextWithOptions(kit.bounds.size, true, 0.0)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
         
+        var img = kit.snapshot()
+        UIGraphicsEndImageContext()
+        
+        UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil)
     }
     //side scrolling
     @IBAction func movehatleft(_ sender: UIButton) {
