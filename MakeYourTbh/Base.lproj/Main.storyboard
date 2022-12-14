@@ -17,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="2100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="tbhScene.scn" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yjs-3L-Q0e">
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" sceneName="tbhScene.scn" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yjs-3L-Q0e">
                                 <rect key="frame" x="16" y="59" width="361" height="269"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                             </sceneKitView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RlT-Z9-Csm">
                                 <rect key="frame" x="16" y="396" width="361" height="1704"/>
@@ -731,21 +732,21 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faY-mU-Aa7">
                                                 <rect key="frame" x="107" y="43" width="146" height="299"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="250"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmq-kR-EkF">
                                                 <rect key="frame" x="107" y="350" width="152" height="299"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="250"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkX-aa-sgp">
                                                 <rect key="frame" x="93" y="703" width="175" height="299"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="250"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
@@ -793,14 +794,10 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CsD-YH-6xz" firstAttribute="width" secondItem="HUJ-OU-OgE" secondAttribute="width" multiplier="0.918575" id="87h-x8-g0v"/>
-                            <constraint firstItem="Yjs-3L-Q0e" firstAttribute="top" secondItem="C1S-Cn-9xh" secondAttribute="top" id="CRf-j5-xYF"/>
-                            <constraint firstItem="RlT-Z9-Csm" firstAttribute="leading" secondItem="Yjs-3L-Q0e" secondAttribute="leading" id="DgQ-Jy-sna"/>
                             <constraint firstItem="RlT-Z9-Csm" firstAttribute="top" secondItem="HUJ-OU-OgE" secondAttribute="top" constant="350" id="EUO-xf-ahv"/>
-                            <constraint firstItem="RlT-Z9-Csm" firstAttribute="trailing" secondItem="Yjs-3L-Q0e" secondAttribute="trailing" id="G28-16-rXC"/>
                             <constraint firstItem="RlT-Z9-Csm" firstAttribute="trailing" secondItem="HUJ-OU-OgE" secondAttribute="trailingMargin" id="GbM-ds-htP"/>
                             <constraint firstItem="RlT-Z9-Csm" firstAttribute="leading" secondItem="HUJ-OU-OgE" secondAttribute="leadingMargin" id="TXM-mn-NiZ"/>
                             <constraint firstItem="RlT-Z9-Csm" firstAttribute="bottom" secondItem="C1S-Cn-9xh" secondAttribute="bottom" id="oUV-j2-udY"/>
-                            <constraint firstItem="RlT-Z9-Csm" firstAttribute="top" secondItem="Yjs-3L-Q0e" secondAttribute="bottom" constant="22" id="wO1-2A-ggk"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="393" height="2100"/>
